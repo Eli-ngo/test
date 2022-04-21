@@ -13,6 +13,14 @@
 
 	src: url("../webfonts/silk_serif_medium_italic-webfont.woff") format("woff"), 
 		url("../webfonts/silk_serif_medium_italic-webfont.woff2") format("woff2");
+    font-style: italic;
+}
+@font-face {
+	font-family: "Ivy-Mode";
+
+	src: url("../webfonts/IvyMode-SemiBoldItalic.woff") format("woff"), 
+		url("../webfonts/IvyMode-SemiBoldItalic.woff2") format("woff2");
+    font-style: italic;
 }
 *{
     margin: 0;
@@ -27,7 +35,8 @@ html,
 body{
     width: 100%;
     height: 100vh;
-    background: #050110;
+    /*background: #050110;*/
+    background: #d2d2db;
 }
 .menu{
     width: 100%;
@@ -38,7 +47,6 @@ body{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background: plum;
 }
 .menu-item{
     flex: 1;
@@ -49,15 +57,45 @@ body{
 .menu-link{
     padding: 0 30px;
 }
-.menu-link,
-.title{
-    color: white;
+
+.title,
+.subtitle{
+    color: black;
+    font-family: "Silk-Serif-Italic";
+}
+.menu-link{
+    font-family: "Ivy-Mode";
+    color: black;
+}
+.normal{
     font-family: "Silk-Serif-Medium";
 }
 .title{
     font-size: 10rem;
     color: #FF360B;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 65%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+} 
+.subtitle{
+    font-size: 10rem;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: grey;
+    width: -1%;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: -14%;
+    transform: rotate(270deg);
+    /*transform: translate(-50%, -50%);*/
+    font-size: 120px;
 }
+
 .i{
     font-family: "Silk-Serif-Italic";
 }
@@ -82,7 +120,49 @@ body{
     width: 50%;
     height: 100vh;
 }
-.image{
+img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+.box{
+    /*background: #050110;*/
+    background: #d2d2db;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+.images {
+	position: absolute;
+	width: 100%;
+	height: 89vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.img {
+	position: absolute;
+	top: 46%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	height: 400px;
+	background: black;
+    
+}
+.left {
+	background: url("../img/img-one.jpg")
+		no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.right {
+	background: url("../img/img-three.jpg")
+		no-repeat 50% 50%;
+	background-size: cover;
 }

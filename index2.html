@@ -167,6 +167,20 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script type="text/javascript">
 
+    //navigation starts here
+    $('#toggle').click(function(){
+        $(this).toggleClass('on');
+        $('#resize').toggleClass('active');
+    });
+
+    $('#resize ul li a').click(function(){
+        $(this).toggleClass('on');
+        $('#resize').toggleClass('active');
+    })
+    //navigation ends here
+
+    new WOW().init();
+
 
     </script>
 </body>
